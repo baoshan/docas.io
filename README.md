@@ -52,12 +52,6 @@ appreciate well-designed code from inspecting docas rendered documents today.
 
 ### Features
 
-  * Your repository, a 3000-feet view
-    + Project structure navigator
-    + Scale measurement in physical SLOC
-    + Statics of languages (over 150)
-    + Recent commit history
-
   * Documentation with no extra cost
     + Always up-to-date documentation
     + Comments becomes documents automatically (using Docco)
@@ -72,10 +66,16 @@ appreciate well-designed code from inspecting docas rendered documents today.
       - C, etc.
       - and Shebang Script
 
+  * Your repository, a 3000-feet view
+    + Project structure navigator
+    + Scale measurement in physical SLOC
+    + Statics of languages (over 150)
+    + Recent commit history
+
   * Document freely
     + Highly-legible typography
     + Rich semantics with markdown
-    + Separation-of-concern, top-down-design, ..., focus on quality of code undistractedly
+    + Separation-of-concern, top-down-design, ..., focus on the quality of code undistractedly
 
   * Configuration free
 

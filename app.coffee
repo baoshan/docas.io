@@ -1,12 +1,12 @@
 
-# Module dependencies.
+# ## Module dependencies.
 
 express = require 'express'
 routes = require './routes'
 
 app = module.exports = express.createServer()
 
-# Configuration
+# ## Configuration
 
 app.configure ->
   app.set 'views', __dirname + '/views'
@@ -24,10 +24,12 @@ app.configure 'development', ->
 app.configure 'production', ->
   app.use express.errorHandler()
 
-# Routes
+# ## Routes
 
+# ### Home Page
 app.get '/', routes.index
 
+# ### GitHub Hook
 app.post '/', routes.hook
 
 app.listen 3000

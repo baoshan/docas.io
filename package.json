@@ -1,19 +1,21 @@
 {
   "name": "docas.io",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "express": "2.5.8",
     "jade": ">= 0.0.1",
     "fairy": ">= 0.0.1"
   },
-  "devDependencies": {},
-  "optionalDependencies": {},
+  "devDependencies": {
+  },
+  "optionalDependencies": {
+  },
   "engines": {
     "node": "*"
   },
   "author": "Baoshan Sheng <sheng@icmd.org>",
-  "description": "Documentation, now as a service!",
+  "description": "Documentation as a service",
   "homepage": "http://docas.io",
   "repository": {
     "type": "git",

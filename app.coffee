@@ -19,7 +19,7 @@ else
   routes = require './routes'
   fairy = require('fairy').connect()
   app = express.createServer()
-  {exec, spawn} = require 'child_process'
+
   # ## Configuration
  
   app.configure ->
@@ -29,7 +29,7 @@ else
     app.use express.methodOverride()
     app.use app.router
     app.use express.static __dirname + '/public'
-    app.use (new require('fairy/server'))()
+    app.use require('fairy/server')()
 
   app.configure 'development', ->
     app.use express.errorHandler

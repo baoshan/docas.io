@@ -1,36 +1,50 @@
 
-# ## Module dependencies.
+cluster = require 'cluster'
 
-express = require 'express'
-routes = require './routes'
+numCPUs = require('os').cpus().length
 
-app = module.exports = express.createServer()
+if cluster.isMaster
 
-# ## Configuration
+  for i in [0...numCPUs]
+    cluster.fork()
 
-app.configure ->
-  app.set 'views', __dirname + '/views'
-  app.set 'view engine', 'jade'
-  app.use express.bodyParser()
-  app.use express.methodOverride()
-  app.use app.router
-  app.use express.static __dirname + '/public'
+  cluster.on 'death', (worker) ->
+    console.log 'worker ' + worker.pid + ' died'
 
-app.configure 'development', ->
-  app.use express.errorHandler
-    dumpExceptions: true
-    showStack: true
+else
 
-app.configure 'production', ->
-  app.use express.errorHandler()
+  # ## Module dependencies.
 
-# ## Routes
+  express = require 'express'
+  routes = require './routes'
+  fairy = require('fairy').connect()
+  app = express.createServer()
+  {exec, spawn} = require 'child_process'
+  # ## Configuration
+ 
+  app.configure ->
+    app.set 'views', __dirname + '/views'
+    app.set 'view engine', 'jade'
+    app.use express.bodyParser()
+    app.use express.methodOverride()
+    app.use app.router
+    app.use express.static __dirname + '/public'
+    app.use (new require('fairy/server'))()
 
-# ### Home Page
-app.get '/', routes.index
+  app.configure 'development', ->
+    app.use express.errorHandler
+      dumpExceptions: true
+      showStack: true
+ 
+  app.configure 'production', ->
+    app.use express.errorHandler()
+ 
+  # ## Routes
 
-# ### GitHub Hook
-app.post '/', routes.hook
+  # ### Home Page
+  app.get '/', routes.index
+ 
+  # ### GitHub Hook
+  app.post '/', routes.hook
 
-app.listen 3000
-console.log "Express server listening on port %d in %s mode", app.address().port, app.settings.env
+  app.listen 3000

@@ -5,6 +5,8 @@
 exports.index = (req, res) ->
   res.render 'index', { title: 'Express' }
 
+fs = require 'fs'
+https = require 'https'
 # **[Fairy]** queue named `DOCAS` is used to queue the documentation tasks.
 #
 # [Fairy]: https://github.com/baoshan/fairy

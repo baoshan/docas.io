@@ -10,6 +10,8 @@ exports.index = (req, res) ->
 # [Fairy]: https://github.com/baoshan/fairy
 queue = require('fairy').connect().queue('DOCAS')
 allowed_ips = ['207.97.227.253', '50.57.128.197', '108.171.174.178']
+authentication = ''
+try authentication = fs.readFileSync '/usr/local/lib/docas/auth', 'utf-8'
 
 # ## Service Hook
 #
@@ -31,4 +33,17 @@ exports.hook = (req, res) ->
   return if allowed_ips.indexOf(req.connection.remoteAddress) is -1
   payload = JSON.parse req.body.payload
   return if payload.ref isnt 'refs/heads/master'
-  queue.enqueue payload.repository.url.split('/')[-2..-1].join('/')
+  [user, repo] = payload.repository.url.split('/')[-2..-1]
+  options = 
+    host: 'api.github.com'
+    path: "/repos/#{user}/#{repo}"
+    auth: authentication
+  req = https.get options, (res) ->
+    return if res.statusCode isnt 200
+    json = ''
+    res.on 'data', (data) -> json += data.toString()
+    res.on 'end', ->
+      repo = JSON.parse(json)
+      if repo.size < 51200
+        queue.enqueue "#{user}/#{repo}"
+  req.end()

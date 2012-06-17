@@ -45,7 +45,7 @@ exports.hook = (req, res) ->
     json = ''
     res.on 'data', (data) -> json += data.toString()
     res.on 'end', ->
-      repo = JSON.parse(json)
-      if repo.size < 51200
+      repo_object = JSON.parse(json)
+      if repo_object.size < 51200
         queue.enqueue "#{user}/#{repo}"
   req.end()

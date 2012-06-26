@@ -30,9 +30,33 @@ with source automatically. So your documentation will be always up-to-date.
 ## Become a Better Developer Right Now
 
   * Include a concise description for all folders and source files.
+
+    + For source files, write the description at the first line as:
+          {COMMENT_SYMBOL}{FOUR SPACES}{THE DESCRIPTION}
+    + For markdown files, write the description at the first line as:
+          {FOUR SPACES}{THE DESCRIPTION}
+    + For directories, the description is the description for the `README.md` in
+    that directory.
+    + For shebang scripts, write the description as source files following the
+    shebang line. 
+
   * Always do top-down design before coding.
+
+    + Break large, complex tasks into many small, simple, and intuitive tasks.
+    + Write down each task's procedure using markdown in comments.
+    + Using docas.io to communicate the design with your team.
+    + Coding will become a breeze once your ideas got proofed.
+
   * Judge the sanity of your design by analysing source lines of code.
+
+    + Tackle down the puzzle piece by piece.
+    + Control the source lines of code of all sources under a maintaibable size.
+
   * Maintain always up-to-date documentations using docas.io.
+  
+    + In two steps, have an always up-to-date documentation hosted at GitHub pages.
+    + Read the source by yourself.
+    + Invite your friends to use or comment on the source.
 
 ## Supported Languages
 

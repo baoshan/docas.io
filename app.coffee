@@ -29,7 +29,7 @@ else
     app.use express.methodOverride()
     app.use app.router
     app.use express.static __dirname + '/public'
-    app.use require('fairy/web')()
+    app.use require('fairy/web').connect()
 
   app.configure 'development', ->
     app.use express.errorHandler

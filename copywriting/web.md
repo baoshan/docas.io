@@ -76,3 +76,57 @@ understand the program construction process.
 of personnel changes or other factors leads to efficiency low and maintenance difficulties.
 
 
+## Steps to Enjoying Docas.io
+
+* Classic Method
+  
+  1. Open your repo on GitHub and go to its admin page.
+  2. Add `docas` as your collaborator.
+  3. Add the service hook at `http://docas.io` from the [admin panel] of your repo.
+  4. Test it with any push. The initial build may takes longer than following pushes.
+  5. You are done. A web interface is planned.
+
+[admin panel]: https://help.github.com/articles/post-receive-hooks
+
+* A Web Inferface is Planned
+
+## Become a Better Developer Right Now
+
+  * Include a concise description for all folders and source files.
+
+    + For source files, write the description at the first line as:
+          {COMMENT_SYMBOL}{FOUR SPACES}{THE DESCRIPTION}
+    + For markdown files, write the description at the first line as:
+          {FOUR SPACES}{THE DESCRIPTION}
+    + For directories, the description is the description for the `README.md` in
+    that directory.
+    + For shebang scripts, write the description as source files following the
+    shebang line. 
+
+  * Always do top-down design before coding.
+
+    + Break large, complex tasks into many small, simple, and intuitive tasks.
+    + Write down each task's procedure using markdown in comments.
+    + Using docas.io to communicate the design with your team.
+    + Coding will become a breeze once your ideas got proofed.
+
+  * Judge the sanity of your design by analysing source lines of code.
+
+    + Tackle down the puzzle piece by piece.
+    + Control the source lines of code of all sources under a maintaibable size.
+
+  * Maintain always up-to-date documentations using docas.io.
+  
+    + In two steps, have an always up-to-date documentation hosted at GitHub pages.
+    + Read the source by yourself.
+    + Invite your friends to use or comment on the source.
+
+## Supported Languages
+
+  * JavaScript
+  * CoffeeScript
+  * Ruby
+  * Python
+  * Perl
+  * Shell
+  * And suggest your favorite!

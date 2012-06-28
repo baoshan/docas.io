@@ -10,11 +10,11 @@ Falling into the deep sea of the code，to find what you want for a long time!
 Confusing what is a function of some code fragment has been compiled by yourself or by others!
 
 Repeatedly describing and testing some codes to your partners!
-
-
+    
+    
 #Let the code talks with you!
-
-
+    
+    
 ##Who's Docas.io
 Docas.io automatically documents your GitHub repo which will be parsed as markdown to ensure 
 legibility, understandability, findability and also semantization on GitHub pages.
@@ -45,8 +45,12 @@ automatically. So the documents will be always up-to-date.
 
 
 ##Reasons of falling in love with your code 
-● __Legibility__        
+● __Legibility__
 Comments will be rendered with your code side by side. 
+
+● __Synchronicity__
+comments doc and code doc will unit as one doc using docas.io to ensure Synchronous 
+Update between coments and codes. 
 
 ● __Semantization__      
 Literate comments ensure readability, smooth and natural.
@@ -57,7 +61,6 @@ Be better to describe what function the code achieved.
 ● __Findability__  
 Be easier to find the code you want in clear comments and reasonable page layout. 
 
-● __Synchronicity__ 
 
 ###For  Developer 
 ●  Easily find the function point of some code fragment in a hundred-line-long documentation.

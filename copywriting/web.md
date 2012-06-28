@@ -45,13 +45,17 @@ automatically. So the documents will be always up-to-date.
 
 
 ##Reasons of falling in love with your code 
-● __Legibility__        Comments will be rendered with your code side by side. 
+● __Legibility__        
+Comments will be rendered with your code side by side. 
 
-● __Semantization__      Literate comments ensure readability, smooth and natural.
+● __Semantization__      
+Literate comments ensure readability, smooth and natural.
 
-● __Understandability__   Be better to describe what function the code achieved.
+● __Understandability__   
+Be better to describe what function the code achieved.
 
-● __Findability__  Be easier to find the code you want in clear comments and reasonable page layout. 
+● __Findability__  
+Be easier to find the code you want in clear comments and reasonable page layout. 
 
 ● __Synchronicity__ 
 

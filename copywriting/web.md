@@ -46,37 +46,37 @@ automatically. So the documents will be always up-to-date.
 
 ##Reasons of falling in love with your code 
 
-● __Legibility__
+  *  __Legibility__    
 Comments will be rendered with your code side by side. 
 
-● __Synchronicity__
+  * __Synchronicity__    
 comments doc and code doc will unit as one doc using docas.io to ensure Synchronous 
 Update between coments and codes. 
 
-● __Semantization__      
+  * __Semantization__      
 Literate comments ensure readability, smooth and natural.
 
-● __Understandability__   
+  * __Understandability__   
 Be better to describe what function the code achieved.
 
-● __Findability__  
+  * __Findability__  
 Be easier to find the code you want in clear comments and reasonable page layout. 
 
 
 ###For  Developer 
-●  Easily find the function point of some code fragment in a hundred-line-long documentation.
+  * Easily find the function point of some code fragment in a hundred-line-long documentation.
 
-●  Literate comments can grasp and analysis the overall design, comb programming ideas.
+  * Literate comments can grasp and analysis the overall design, comb programming ideas.
 
-● Generated documents help you to pick up the train of thought, also make other programmers easier to 
+  * Generated documents help you to pick up the train of thought, also make other programmers easier to 
 understand the program construction process.
 
-●  Be good for thinking, and to all view the code from a higher level. 
+  * Be good for thinking, and to all view the code from a higher level. 
 
 ###For  R&D Team
-●  The required source code will be quickly find by your partners for using and improvement.
+  * The required source code will be quickly find by your partners for using and improvement.
 
-●  Enhance the efficiency of the project development and follow-up maintenance. Avoid the influence 
+  * Enhance the efficiency of the project development and follow-up maintenance. Avoid the influence 
 of personnel changes or other factors leads to efficiency low and maintenance difficulties.
 
 

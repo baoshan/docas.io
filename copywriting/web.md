@@ -7,7 +7,7 @@ Literate Programming can be Quicker and Dirtier.
 ##Stop Doing
 Falling into the deep sea of the code，to find what you want for a long time!
 
-Confusing what is a function of some code fragment has been compiled by yourself or by others!
+Confusing what is a function of some code fragments has been compiled by yourself or by others!
 
 Repeatedly describing and testing some codes to your partners!
     

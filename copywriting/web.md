@@ -45,6 +45,7 @@ automatically. So the documents will be always up-to-date.
 
 
 ##Reasons of falling in love with your code 
+
 ● __Legibility__
 Comments will be rendered with your code side by side. 
 

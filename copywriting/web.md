@@ -1,5 +1,4 @@
 #Docas
----------------------------------------
 Literate Programming can be Quicker and Dirtier. 
     
     
@@ -13,6 +12,7 @@ Repeatedly describing and testing some codes to your partners!
     
     
 #Let the code talks with you!
+    
     
     
 ##Who's Docas.io

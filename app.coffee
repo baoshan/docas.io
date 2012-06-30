@@ -1,3 +1,4 @@
+#    Express app for GitHub hook and docas.io website.
 
 cluster = require 'cluster'
 
@@ -7,9 +8,12 @@ if cluster.isMaster
 
   for i in [0...numCPUs]
     cluster.fork()
+    console.log 'worker started'
 
-  cluster.on 'death', (worker) ->
-    console.log 'worker ' + worker.pid + ' died'
+  cluster.on 'exit', (worker, code, signal) ->
+    exitCode = worker.process.exitCode;
+    console.log 'worker ' + worker.pid + ' died (' + exitCode + '). restarting...'
+    cluster.fork()
 
 else
 

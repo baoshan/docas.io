@@ -1,19 +1,24 @@
+#    Clustered docas workers restart on exit.
 
-# ## Node.js Cluster on Multi Cores
 cluster = require 'cluster'
+
+numCPUs = require('os').cpus().length
 
 if cluster.isMaster
 
-  numCPUs = require('os').cpus().length
-  cluster.fork() for i in [0...numCPUs]
+  for i in [0...numCPUs]
+    cluster.fork()
+    console.log 'worker started'
 
-  cluster.on 'death', (worker) ->
-    console.info 'worker ' + worker.pid + ' died'
+  cluster.on 'exit', (worker, code, signal) ->
+    exitCode = worker.process.exitCode;
+    console.log 'worker ' + worker.pid + ' died (' + exitCode + '). restarting...'
     cluster.fork()
 
 else
 
   # ## Worker Configuration
+
   fairy = require('fairy').connect()
   {spawn} = require 'child_process'
 

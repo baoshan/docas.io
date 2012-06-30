@@ -1,4 +1,4 @@
-#    Clustered docas workers restart on exit.
+#    Start clustered docas workers and restart on exit.
 
 cluster = require 'cluster'
 

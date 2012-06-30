@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head><title>baoshan/docas.io » routes › index.coffee
+| Router method for index page and GitHub hook.
+</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Docco">
+<link rel="stylesheet" media="all" href="../stylesheets/docco.min.css" />
+
+
+</head>
+<body>
+<div id="container">
+<div id="background"></div>
+<table cellpadding="0" cellspacing="0">
+<thead><tr><th class="docs"><h1>index.coffee</h1></th><th class="code"></th></tr></thead>
+<tbody>
+
+
+<tr id="section-1"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-1">&#182;</a></div><p>Router method for index page and GitHub hook.</p></td><td class="code"><div class="highlight"><pre></pre></div></td></tr>
+
+
+<tr id="section-2"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-2">&#182;</a></div><h2>Homepage</h2>
+
+<p>Use <strong>Express</strong> to render the homepage.</p></td><td class="code"><div class="highlight"><pre><span class="nv">exports.index = </span><span class="nf">(req, res) -&gt;</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span> <span class="s">&#39;index&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nv">title: </span><span class="s">&#39;Express&#39;</span> <span class="p">}</span>
+
+<span class="nv">fs = </span><span class="nx">require</span> <span class="s">&#39;fs&#39;</span>
+<span class="nv">https = </span><span class="nx">require</span> <span class="s">&#39;https&#39;</span></pre></div></td></tr>
+
+
+<tr id="section-3"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-3">&#182;</a></div><p><strong><a href="https://github.com/baoshan/fairy">Fairy</a></strong> queue named <code>DOCAS</code> is used to queue the documentation tasks.</p></td><td class="code"><div class="highlight"><pre><span class="nv">queue = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;fairy&#39;</span><span class="p">).</span><span class="nx">connect</span><span class="p">().</span><span class="nx">queue</span><span class="p">(</span><span class="s">&#39;DOCAS&#39;</span><span class="p">)</span>
+<span class="nv">allowed_ips = </span><span class="p">[</span>
+  <span class="s">&#39;207.97.227.253&#39;</span>
+  <span class="s">&#39;50.57.128.197&#39;</span>
+  <span class="s">&#39;108.171.174.178&#39;</span>
+<span class="p">]</span>
+<span class="nv">authentication = </span><span class="s">&#39;&#39;</span>
+<span class="k">try</span> <span class="nv">authentication = </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span> <span class="s">&#39;/usr/local/lib/docas/auth&#39;</span><span class="p">,</span> <span class="s">&#39;utf-8&#39;</span></pre></div></td></tr>
+
+
+<tr id="section-4"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-4">&#182;</a></div><h2>Service Hook</h2>
+
+<p>Reject queuing into <code>DOCAS</code> queue if:</p>
+
+<ol>
+<li>The request's source ip isn't listed in the <code>admin/hooks</code> page of your
+repo.</li>
+<li>The ref of the branch is not <code>refs/heads/master</code>.</li>
+</ol>
+
+<p>Tasks will be enqueued at <strong>Fairy</strong> queue named <code>DOCAS</code>, currently the
+arguments are:</p>
+
+<ol>
+<li><code>user/repo</code></li>
+</ol>
+
+<p>The first argument <code>user/repo</code> will be used as the <strong>Fairy</strong> queue group
+identifier.</p></td><td class="code"><div class="highlight"><pre><span class="nv">exports.hook = </span><span class="nf">(req, res) -&gt;</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">()</span>
+  <span class="k">return</span> <span class="nx">unless</span> <span class="nx">req</span><span class="p">.</span><span class="nx">connection</span><span class="p">.</span><span class="nx">remoteAddress</span> <span class="k">in</span> <span class="nx">allowed_ips</span>
+  <span class="nv">payload = </span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">payload</span>
+  <span class="k">return</span> <span class="k">if</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">ref</span> <span class="o">isnt</span> <span class="s">&#39;refs/heads/master&#39;</span>
+  <span class="p">[</span><span class="nx">user</span><span class="p">,</span> <span class="nx">repo</span><span class="p">]</span> <span class="o">=</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">repository</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">..</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+  <span class="nv">options = </span>
+    <span class="nv">host: </span><span class="s">&#39;api.github.com&#39;</span>
+    <span class="nv">path: </span><span class="s">&quot;/repos/</span><span class="si">#{</span><span class="nx">user</span><span class="si">}</span><span class="s">/</span><span class="si">#{</span><span class="nx">repo</span><span class="si">}</span><span class="s">&quot;</span>
+    <span class="nv">auth: </span><span class="nx">authentication</span>
+  <span class="nx">https</span><span class="p">.</span><span class="nx">get</span> <span class="nx">options</span><span class="p">,</span> <span class="nf">(res) -&gt;</span>
+    <span class="k">return</span> <span class="nx">unless</span> <span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">is</span> <span class="mi">200</span>
+    <span class="nv">json = </span><span class="s">&#39;&#39;</span>
+    <span class="nx">res</span><span class="p">.</span><span class="kc">on</span> <span class="s">&#39;data&#39;</span><span class="p">,</span> <span class="nf">(data) -&gt;</span> <span class="nx">json</span> <span class="o">+=</span> <span class="nx">data</span>
+    <span class="nx">res</span><span class="p">.</span><span class="kc">on</span> <span class="s">&#39;end&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+      <span class="nv">repo_object = </span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+      <span class="k">if</span> <span class="nx">repo_object</span><span class="p">.</span><span class="nx">size</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">1024</span>
+        <span class="nx">queue</span><span class="p">.</span><span class="nx">enqueue</span> <span class="s">&quot;</span><span class="si">#{</span><span class="nx">user</span><span class="si">}</span><span class="s">/</span><span class="si">#{</span><span class="nx">repo</span><span class="si">}</span><span class="s">&quot;</span>
+  <span class="p">.</span><span class="nx">end</span><span class="p">()</span>
+
+</pre></div></td></tr>
+
+</tbody>
+</table>
+</div>
+
+</body>
+<script>docas={repo:"baoshan/docas.io",depth:1}</script>
+<script>document.write('<script src=' + ('__proto__' in {} ? 'http://cdnjs.cloudflare.com/ajax/libs/zepto/1.0rc1/zepto.min.js' : 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')+'><\\/script>')</script>
+<script src="http://baoshan.github.com/moment/min/moment.min.js"></script>
+<script src="../javascript/docco.min.js"></script>
+</html>

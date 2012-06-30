@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><title>baoshan/docas.io » app.coffee
+| Express app for GitHub hook and docas.io website.
+</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Docco">
+<link rel="stylesheet" media="all" href="stylesheets/docco.min.css" />
+
+
+</head>
+<body>
+<div id="container">
+<div id="background"></div>
+<table cellpadding="0" cellspacing="0">
+<thead><tr><th class="docs"><h1>app.coffee</h1></th><th class="code"></th></tr></thead>
+<tbody>
+
+
+<tr id="section-1"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-1">&#182;</a></div><p>Express app for GitHub hook and docas.io website.</p></td><td class="code"><div class="highlight"><pre><span class="nv">cluster = </span><span class="nx">require</span> <span class="s">&#39;cluster&#39;</span>
+
+<span class="nv">numCPUs = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;os&#39;</span><span class="p">).</span><span class="nx">cpus</span><span class="p">().</span><span class="nx">length</span>
+
+<span class="k">if</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">isMaster</span>
+
+  <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">...</span><span class="nx">numCPUs</span><span class="p">]</span>
+    <span class="nx">cluster</span><span class="p">.</span><span class="nx">fork</span><span class="p">()</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&#39;worker started&#39;</span>
+
+  <span class="nx">cluster</span><span class="p">.</span><span class="kc">on</span> <span class="s">&#39;exit&#39;</span><span class="p">,</span> <span class="nf">(worker, code, signal) -&gt;</span>
+    <span class="nv">exitCode = </span><span class="nx">worker</span><span class="p">.</span><span class="nx">process</span><span class="p">.</span><span class="nx">exitCode</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&#39;worker &#39;</span> <span class="o">+</span> <span class="nx">worker</span><span class="p">.</span><span class="nx">pid</span> <span class="o">+</span> <span class="s">&#39; died (&#39;</span> <span class="o">+</span> <span class="nx">exitCode</span> <span class="o">+</span> <span class="s">&#39;). restarting...&#39;</span>
+    <span class="nx">cluster</span><span class="p">.</span><span class="nx">fork</span><span class="p">()</span>
+
+<span class="k">else</span></pre></div></td></tr>
+
+
+<tr id="section-2"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-2">&#182;</a></div><h2>Module dependencies.</h2></td><td class="code"><div class="highlight"><pre>  <span class="nv">express = </span><span class="nx">require</span> <span class="s">&#39;express&#39;</span>
+  <span class="p">{</span><span class="nx">index</span><span class="p">,</span> <span class="nx">hook</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span> <span class="s">&#39;./routes&#39;</span>
+  <span class="nv">http = </span><span class="nx">require</span> <span class="s">&#39;http&#39;</span>
+  <span class="nv">fairy = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;fairy&#39;</span><span class="p">).</span><span class="nx">connect</span><span class="p">()</span>
+  <span class="nv">app = </span><span class="nx">express</span><span class="p">()</span></pre></div></td></tr>
+
+
+<tr id="section-3"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-3">&#182;</a></div><h2>Configuration</h2></td><td class="code"><div class="highlight"><pre> 
+  <span class="nx">app</span><span class="p">.</span><span class="nx">configure</span> <span class="o">-&gt;</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">set</span> <span class="s">&#39;port&#39;</span><span class="p">,</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">or</span> <span class="mi">3000</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">set</span> <span class="s">&#39;views&#39;</span><span class="p">,</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s">&#39;/views&#39;</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">set</span> <span class="s">&#39;view engine&#39;</span><span class="p">,</span> <span class="s">&#39;jade&#39;</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span> <span class="nx">express</span><span class="p">.</span><span class="nx">favicon</span><span class="p">()</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span> <span class="nx">express</span><span class="p">.</span><span class="nx">bodyParser</span><span class="p">()</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span> <span class="nx">express</span><span class="p">.</span><span class="nx">methodOverride</span><span class="p">()</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span> <span class="nx">app</span><span class="p">.</span><span class="nx">router</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span> <span class="nx">express</span><span class="p">.</span><span class="nx">static</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s">&#39;/public&#39;</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span> <span class="nx">require</span><span class="p">(</span><span class="s">&#39;fairy/web&#39;</span><span class="p">).</span><span class="nx">connect</span><span class="p">().</span><span class="nx">middleware</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">configure</span> <span class="s">&#39;development&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span> <span class="nx">express</span><span class="p">.</span><span class="nx">errorHandler</span><span class="p">()</span>
+ </pre></div></td></tr>
+
+
+<tr id="section-4"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-4">&#182;</a></div><h2>Routes</h2></td><td class="code"><div class="highlight"><pre></pre></div></td></tr>
+
+
+<tr id="section-5"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-5">&#182;</a></div><h3>Home Page</h3></td><td class="code"><div class="highlight"><pre>  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span> <span class="s">&#39;/&#39;</span><span class="p">,</span> <span class="nx">index</span>
+ </pre></div></td></tr>
+
+
+<tr id="section-6"><td class="docs"><div class="pilwrap"><a class="pilcrow" href="#section-6">&#182;</a></div><h3>GitHub Hook</h3></td><td class="code"><div class="highlight"><pre>  <span class="nx">app</span><span class="p">.</span><span class="nx">post</span> <span class="s">&#39;/&#39;</span><span class="p">,</span> <span class="nx">hook</span>
+
+  <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">listen</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s">&#39;port&#39;</span><span class="p">),</span> <span class="o">-&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;Express server listening on port &quot;</span> <span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s">&#39;port&#39;</span><span class="p">)</span>
+
+</pre></div></td></tr>
+
+</tbody>
+</table>
+</div>
+
+</body>
+<script>docas={repo:"baoshan/docas.io",depth:0}</script>
+<script>document.write('<script src=' + ('__proto__' in {} ? 'http://cdnjs.cloudflare.com/ajax/libs/zepto/1.0rc1/zepto.min.js' : 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')+'><\\/script>')</script>
+<script src="http://baoshan.github.com/moment/min/moment.min.js"></script>
+<script src="javascript/docco.min.js"></script>
+</html>

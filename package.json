@@ -1,25 +1,12 @@
 {
-  "name": "docas.io",
+  "name": "application-name",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
   "dependencies": {
-    "express": "2.5.8",
-    "jade": ">= 0.0.1",
-    "fairy": ">= 0.0.1"
-  },
-  "devDependencies": {
-  },
-  "optionalDependencies": {
-  },
-  "engines": {
-    "node": "*"
-  },
-  "author": "Baoshan Sheng <sheng@icmd.org>",
-  "description": "Documentation as a service",
-  "homepage": "http://docas.io",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/baoshan/docas.io.git"
-  },
-  "main": "app.coffee"
+    "express": "3.0.0beta4",
+    "jade": "*"
+  }
 }

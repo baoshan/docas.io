@@ -20,15 +20,18 @@ else
   # ## Module dependencies.
 
   express = require 'express'
-  routes = require './routes'
+  {index, hook} = require './routes'
+  http = require 'http'
   fairy = require('fairy').connect()
-  app = express.createServer()
+  app = express()
 
   # ## Configuration
  
   app.configure ->
+    app.set 'port', process.env.PORT or 3000
     app.set 'views', __dirname + '/views'
     app.set 'view engine', 'jade'
+    app.use express.favicon()
     app.use express.bodyParser()
     app.use express.methodOverride()
     app.use app.router
@@ -36,19 +39,15 @@ else
     app.use require('fairy/web').connect().middleware
 
   app.configure 'development', ->
-    app.use express.errorHandler
-      dumpExceptions: true
-      showStack: true
- 
-  app.configure 'production', ->
     app.use express.errorHandler()
  
   # ## Routes
 
   # ### Home Page
-  app.get '/', routes.index
+  app.get '/', index
  
   # ### GitHub Hook
-  app.post '/', routes.hook
+  app.post '/', hook
 
-  app.listen 3000
+  http.createServer(app).listen app.get('port'), ->
+    console.log "Express server listening on port " + app.get('port')

@@ -29,7 +29,7 @@ with source automatically. So your documentation will be always up-to-date.
 
 ## Become a Better Developer Right Now
 
-  * Include a concise description for all folders and source files.
+  * Architecturing the Project Include a concise description for all folders and source files.
 
     + For source files, write the description at the first line as:
           {COMMENT_SYMBOL}{FOUR SPACES}{THE DESCRIPTION}
@@ -44,19 +44,20 @@ with source automatically. So your documentation will be always up-to-date.
 
     + Break large, complex tasks into many small, simple, and intuitive tasks.
     + Write down each task's procedure using markdown in comments.
-    + Using docas.io to communicate the design with your team.
-    + Coding will become a breeze once your ideas got proofed.
+    + Communicate your design in docas generated documents with your team.
+    + Coding will be a breeze when your ideas get into shape.
 
-  * Judge the sanity of your design by analysing source lines of code.
+  * Judge the Sanity of Design by analysing source lines of code.
 
-    + Tackle down the puzzle piece by piece.
-    + Control the source lines of code of all sources under a maintaibable size.
+    + Tackle the puzzle down piece by piece.
+    + Keep source lines of code under a maintaibable size.
 
-  * Maintain always up-to-date documentations using docas.io.
+  * Maintain Up-to-Date Documents using Docas
   
-    + In two steps, have an always up-to-date documentation hosted at GitHub pages.
-    + Read the source by yourself.
-    + Invite your friends to use or comment on the source.
+    + Time spent will be rewarded when the code is maintained or enhanced.
+    + Rewards can come either from you or your team.
+    + Read your own source code, Luke!
+    + Invite friends to review your work.
 
 ## Supported Languages
 

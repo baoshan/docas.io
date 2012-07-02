@@ -6,14 +6,11 @@ but also **synchronizes** them on new commits.
 ## How Docas Works
 
 Source files and documents are different branchs (`master` and `gh-pages` accordingly) 
-of the same repo. Every time you push to GitHub, docas automatically synchronizes
-documents hosted at GitHub pages.
+of the same repo. Every time you push to GitHub, docas synchronizes documents hosted
+at GitHub pages automatically.
 
-The always up-to-date document site by default locates at:
-
-    your_github_login.github.com/your_repository_name
-
-will include:
+The always up-to-date document site is hosted at
+`your_github_login.github.com/your_repository_name` by default, which includes:
 
   1. **A project page.** The place not only perfect for keeping great ideas,
   but also help you form a better architecture by including concise description
@@ -43,7 +40,7 @@ will include:
     + *According feature:* Docco (markdown and highlighted code side-by-side.)
     + *According feature:* Browsing markdown in the project page.
 
-  * __Communicate Well__
+  * **Communicate Well**
 
     + Include a concise description for every folder and source file.
     + Shape your ideas and communicate with your team using docas.

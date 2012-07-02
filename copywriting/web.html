@@ -1,13 +1,13 @@
 <h2>Introducing Docas</h2>
 
-<p>Docas is <strong>an automatic documentation service</strong> which not only documents your GitHub
-repo, but <strong>keeps them up-to-date</strong> when new commits are pushed to GitHub.</p>
+<p>Docas is a <strong>documentation service</strong> which not only <strong>documents</strong> your GitHub repo,
+but also <strong>synchronizes</strong> them on new commits.</p>
 
 <h2>How Docas Works</h2>
 
-<p>Every time you push to GitHub, docas automatically synchronizes documents hosted
-at GitHub pages. Source files and documents are different branchs (<code>master</code>
-and <code>gh-pages</code> accordingly) of the same repo.</p>
+<p>Source files and documents are different branchs (<code>master</code> and <code>gh-pages</code> accordingly) 
+of the same repo. Every time you push to GitHub, docas automatically synchronizes
+documents hosted at GitHub pages.</p>
 
 <p>The always up-to-date document site by default locates at:</p>
 
@@ -27,8 +27,8 @@ code side-by-side to help you approach a better <em>literate-style</em> programm
 <h2>One-Time Setup</h2>
 
 <ol>
-<li>Add <code>docas</code> as your collaborator.</li>
-<li>Add service hook <code>http://docas.io</code> from the <a href="https://help.github.com/articles/post-receive-hooks">admin panel</a>.</li>
+<li>Add <code>docas</code> as your collaborator from the <a href="https://help.github.com/articles/post-receive-hooks">admin panel</a>.</li>
+<li>Add service hook <code>http://docas.io</code>.</li>
 <li>You're there!
 <ul><li>Test it with any push or press the <strong>Test Hook</strong> button.</li>
 <li>First build takes longer than following synchronizations.</li></ul></li>

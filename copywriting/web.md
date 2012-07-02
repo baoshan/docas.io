@@ -1,8 +1,7 @@
 ## Introducing Docas
 
-Docas is an automatic documentation service which not only documents your GitHub
-repo at GitHub pages, but also keeps them up-to-date when new commits are pushed
-to GitHub.
+Docas is **an automatic documentation service** which not only documents your GitHub
+repo, but **keeps them up-to-date** when new commits are pushed to GitHub.
 
 ## How Docas Works
 

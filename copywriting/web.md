@@ -19,8 +19,8 @@ will include:
   but also help you form a better architecture by including concise description
   for every folder and source file.
 
-  2. **Source code documents.** Comments in markdown will be rendered with your
-  code side-by-side to help you approach a better *literate-style* programming.
+  2. **Source code documents.** Comments in markdown will be displayed alongside 
+  your code to help you approach a better *literate-style* programming.
 
 ## One-Time Setup
 

@@ -16,8 +16,8 @@ The always up-to-date document site by default locates at:
 will include:
 
   1. **A project page.** The place not only perfect for keeping great ideas,
-  but also help forming better architecture by including effective description
-  for every folder and source code.
+  but also help you form a better architecture by including concise description
+  for every folder and source file.
 
   2. **Source code documents.** Comments in markdown will be rendered with your
   code side-by-side to help you approach a better *literate-style* programming.
@@ -34,36 +34,36 @@ will include:
 
 ## Being Smarter
 
-  * Start Last, Finish First!
+  * __Start Last, Finish First!__
 
     + Do top-down and orthogonal design before coding the first line.
-    + Break large, complex tasks into small, simple, intuitive, and orthogonal
+    + Break large and complex tasks into small, simple, intuitive, and orthogonal
     tasks.
     + Design every task's detail in plain English and markdown.
     + *According feature:* Docco (markdown and highlighted code side-by-side.)
     + *According feature:* Browsing markdown in the project page.
 
-  * Communicate Well
+  * __Communicate Well__
 
     + Include a concise description for every folder and source file.
     + Shape your ideas and communicate with your team using docas.
     + *According feature:* Description for folders and files.
 
-  * Stay Focused When Coding
+  * __Stay Focused When Coding__
 
     + Uncompromised engineering finally proofs your ideas.
     + Balance your design by keeping source lines of code under a maintaibable
     size.
-    + Docas let code speaks for itself!
+    + Docas let your code speaks for itself!
     + *Counterpoint feature:* SLOC statistics.
 
-  * Keep Documents Fresh
+  * __Keep Documents Fresh__
   
     + Your time spent will be rewarded when code is maintained or enhanced.
     + Rewards come both from yourself and your team.
     + *According feature:* GitHub push synchronization.
 
-  * Release It!
+  * __Release It!__
 
     + Set another exciting goal to motivate yourself.
     + Have a party with your team!

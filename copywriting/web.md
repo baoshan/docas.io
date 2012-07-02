@@ -69,16 +69,6 @@ will include:
     + Have a party with your team!
     + *According feature:* Try docas (beta) now!
 
-## Supported Languages
-
-  * JavaScript
-  * CoffeeScript
-  * Ruby
-  * Python
-  * Perl
-  * Shell
-  * And suggest your favorite!
-
 ## Recycle Bin
 
 ## Feature
@@ -92,38 +82,12 @@ will include:
     + For shebang scripts, write the description as source files following the
     shebang line. 
 
-## Reasons of falling in love with your code 
+## Supported Languages
 
-  *  __Legibility__    
-Comments will be rendered with your code side by side. 
-
-  * __Synchronicity__    
-comments doc and code doc will unit as one doc using docas.io to ensure Synchronous 
-Update between coments and codes. 
-
-  * __Semantization__      
-Literate comments ensure readability, smooth and natural.
-
-  * __Understandability__   
-Be better to describe what function the code achieved.
-
-  * __Findability__  
-Be easier to find the code you want in clear comments and reasonable page layout. 
-
-
-###For  Developer 
-  * Easily find the function point of some code fragment in a hundred-line-long documentation.
-
-  * Literate comments can grasp and analysis the overall design, comb programming ideas.
-
-  * Generated documents help you to pick up the train of thought, also make other programmers easier to 
-understand the program construction process.
-
-  * Be good for thinking, and to all view the code from a higher level. 
-
-##Stop Doing
-Falling into the deep sea of the code，to find what you want for a long time!
-
-Confusing what is a function of some code fragments has been compiled by yourself or by others!
-
-Repeatedly describing and testing some codes to your partners!
+  * JavaScript
+  * CoffeeScript
+  * Ruby
+  * Python
+  * Perl
+  * Shell
+  * And suggest your favorite!

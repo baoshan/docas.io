@@ -75,37 +75,37 @@ The always up-to-date document site is hosted at
 
 ## Features
 
-  * **HTML support**
+  * HTML support
 
-  * **A Document site support**
+  * A Document site support
 
-  * **Automatically generated repo page **
+  * Automatically generated repo page
 
-  * **Fast setup**
+  * Fast setup
 
-  * **Markdown and highlighted code in a document**
+  * Markdown and highlighted code in a document
 
-  * **Master and gh-pages branchs accordingly**
+  * Master and gh-pages branchs accordingly
 
-  * **Comments are displayed alongside code**
+  * Comments are displayed alongside code
 
-  * **Literate-style programming**
+  * Literate-style programming
 
-  * **Browsing markdown in the repo page**
+  * Browsing markdown in the repo page
 
-  * **Concise description for every folder and source file**
+  * Concise description for every folder and source file
 
-  * **SLOC statistics**
+  * SLOC statistics
 
-  * **SIZE statistics**
+  * SIZE statistics
 
-  * **Languages statistics**
+  * Languages statistics
 
-  * **recent commits** 
+  * recent commits 
 
-  * **Synchronous generation for comments and code**
+  * Synchronous generation for comments and code
 
-  * **Automaticlly updates documents on new commits**
+  * Automaticlly updates documents on new commits
 
 
 

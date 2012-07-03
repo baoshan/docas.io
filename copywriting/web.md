@@ -107,21 +107,6 @@ The always up-to-date document site is hosted at
 
   * Automaticlly updates documents on new commits
 
-
-
-## Recycle Bin
-
-## Feature
-
-    + For source files, write the description at the first line as:
-          {COMMENT_SYMBOL}{FOUR SPACES}{THE DESCRIPTION}
-    + For markdown files, write the description at the first line as:
-          {FOUR SPACES}{THE DESCRIPTION}
-    + For directories, the description is the description for the `README.md` in
-    that directory.
-    + For shebang scripts, write the description as source files following the
-    shebang line. 
-
 ## Supported Languages
 
   * JavaScript

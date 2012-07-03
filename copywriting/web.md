@@ -52,7 +52,6 @@ The always up-to-date document site is hosted at
     + *According feature:* Description for folders and files.
 
     ![alt test](http://d3.freep.cn/3tb_120703103944lo00480428.jpg)
-    ......
     ![alt test](http://d2.freep.cn/3tb_120703103941on8o480428.jpg)
 
 

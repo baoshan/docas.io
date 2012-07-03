@@ -81,7 +81,7 @@ The always up-to-date document site is hosted at
 
   * Automatically generated repo page
 
-  * one-time quick setup
+  * One-time quick setup
 
   * Markdown and highlighted code in a document
 

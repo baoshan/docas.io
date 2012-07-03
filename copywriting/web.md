@@ -77,7 +77,7 @@ The always up-to-date document site is hosted at
 
   * HTML support
 
-  * A Document site support
+  * A document site support
 
   * Automatically generated repo page
 
@@ -91,7 +91,7 @@ The always up-to-date document site is hosted at
 
   * Literate-style programming
 
-  * Browsing markdown in the repo page
+  * Browses markdown in the repo page
 
   * Concise description for every folder and source file
 
@@ -101,7 +101,7 @@ The always up-to-date document site is hosted at
 
   * Languages statistics
 
-  * recent commits 
+  * Recent commits 
 
   * Synchronous generation for comments and code
 

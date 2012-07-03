@@ -89,11 +89,11 @@ The always up-to-date document site is hosted at
     Pygments syntax highlighting. 
     eg:
     
-    source code doc
+    Source code doc
     
     ![alt test](http://d3.freep.cn/3tb_120703151326m9pn480428.jpg)
 
-    generated HTML
+    Generated HTML
     
     ![alt test](http://d2.freep.cn/3tb_120703155124o734480428.jpg)
 

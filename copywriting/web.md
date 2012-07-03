@@ -37,14 +37,24 @@ The always up-to-date document site is hosted at
     + Break large and complex tasks into small, simple, intuitive, and orthogonal
     tasks.
     + Design every task's detail in plain English and markdown.
+
+
     + *According feature:* Docco (markdown and highlighted code side-by-side.)
     + *According feature:* Browsing markdown in the project page.
+
+    ![alt test](http://d1.freep.cn/3tb_120703103951koth480428.png)
 
   * **Communicate Well**
 
     + Include a concise description for every folder and source file.
     + Shape your ideas and communicate with your team using docas.
+
     + *According feature:* Description for folders and files.
+
+    ![alt test](http://d3.freep.cn/3tb_120703103944lo00480428.jpg)
+    ......
+    ![alt test](http://d2.freep.cn/3tb_120703103941on8o480428.jpg)
+
 
   * **Stay Focused When Coding**
 

@@ -99,7 +99,7 @@ The always up-to-date document site is hosted at
 
   * SIZE statistics
 
-  * Languages statistics
+  * LANGUAGES statistics
 
   * Recent commits 
 

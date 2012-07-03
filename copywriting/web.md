@@ -31,7 +31,7 @@ The always up-to-date document site is hosted at
 
 ## Being Smarter
 
-  * __Start Last, Finish First!__
+  * **Start Last, Finish First!**
 
     + Do top-down and orthogonal design before coding the first line.
     + Break large and complex tasks into small, simple, intuitive, and orthogonal
@@ -46,7 +46,7 @@ The always up-to-date document site is hosted at
     + Shape your ideas and communicate with your team using docas.
     + *According feature:* Description for folders and files.
 
-  * __Stay Focused When Coding__
+  * **Stay Focused When Coding**
 
     + Uncompromised engineering finally proofs your ideas.
     + Balance your design by keeping source lines of code under a maintaibable
@@ -54,13 +54,13 @@ The always up-to-date document site is hosted at
     + Docas let your code speaks for itself!
     + *Counterpoint feature:* SLOC statistics.
 
-  * __Keep Documents Fresh__
+  * **Keep Documents Fresh**
   
     + Your time spent will be rewarded when code is maintained or enhanced.
     + Rewards come both from yourself and your team.
     + *According feature:* GitHub push synchronization.
 
-  * __Release It!__
+  * **Release It!**
 
     + Set another exciting goal to motivate yourself.
     + Have a party with your team!

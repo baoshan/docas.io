@@ -66,13 +66,6 @@ The always up-to-date document site is hosted at
     + Rewards come both from yourself and your team.
     + *According feature:* GitHub push synchronization.
    
-    ![alt test](http://d1.freep.cn/3tb_1207031039491via480428.jpg)
-
-    ![alt test](http://d1.freep.cn/3tb_120703103940l9bm480428.jpg)
-
-    ![alt test](http://d2.freep.cn/3tb_120703103946q25h480428.jpg) 
-    
-    ![alt test](http://d3.freep.cn/3tb_1207031039506snx480428.jpg) 
 
   * **Release It!**
 
@@ -82,64 +75,37 @@ The always up-to-date document site is hosted at
 
 ## Features
 
-  * **Docco**
+  * **HTML support**
 
-    It produces HTML that displays your comments alongside your code.
-    Comments are passed through Markdown, and code is passed through
-    Pygments syntax highlighting. 
-    eg:
-    
-    Source code doc
-    
-    ![alt test](http://d3.freep.cn/3tb_120703151326m9pn480428.jpg)
+  * **A Document site support**
 
-    Generated HTML
-    
-    ![alt test](http://d2.freep.cn/3tb_120703155124o734480428.jpg)
+  * **Automatically generated repo page **
 
-  * **Synchronous Update**
-  
-   Synchronously updates your new commits in a document automatically.
+  * **Fast setup**
 
-   Accomplish one-time setup before synchronizing.
-   
+  * **Markdown and highlighted code in a document**
 
-  * **Concise Description**
- 
-   + For source files, write the description at the first line as:
-      {COMMENT_SYMBOL}{FOUR SPACES}{THE DESCRIPTION}
+  * **Master and gh-pages branchs accordingly**
 
-   + For markdown files, write the description at the first line as:
-      {FOUR SPACES}{THE DESCRIPTION}
+  * **Comments are displayed alongside code**
 
-   + For directories, the description is the description for the
-     `README.md` in that directory.
+  * **Literate-style programming**
 
-   + For shebang scripts, write the description as source files following 
-     the shebang line.
+  * **Browsing markdown in the repo page**
 
-     eg:
-     
-    ![alt test](http://d3.freep.cn/3tb_120703103944lo00480428.jpg)
-    ![alt test](http://d2.freep.cn/3tb_120703103941on8o480428.jpg)
+  * **Concise description for every folder and source file**
 
-  * **Statistics** 
- 
-   Docas automatically generates statistics including sloc，size，languages for source files in your repo page.  
+  * **SLOC statistics**
 
-   Be better to estimate programming productivity or maintainability for developing your repo.
+  * **SIZE statistics**
 
-   Sloc：
-   
-   ![alt test](http://d3.freep.cn/3tb_120703103943lmbh480428.jpg)
+  * **Languages statistics**
 
-   Size：
-   
-   ![alt test](http://d3.freep.cn/3tb_120703103947xhst480428.jpg)
+  * **recent commits** 
 
-   Languages：
-   
-   ![alt test](http://d1.freep.cn/3tb_120703103948c734480428.jpg)
+  * **Synchronous generation for comments and code**
+
+  * **Automaticlly updates documents on new commits**
 
 
 

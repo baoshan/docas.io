@@ -63,12 +63,24 @@ The always up-to-date document site is hosted at
     size.
     + Docas let your code speaks for itself!
     + *Counterpoint feature:* SLOC statistics.
+    
+    ![alt test](http://d3.freep.cn/3tb_120703103943lmbh480428.jpg)...
+    ![alt test](http://d3.freep.cn/3tb_120703103947xhst480428.jpg)
+    ![alt test](http://d1.freep.cn/3tb_120703103948c734480428.jpg) 
 
   * **Keep Documents Fresh**
   
     + Your time spent will be rewarded when code is maintained or enhanced.
     + Rewards come both from yourself and your team.
     + *According feature:* GitHub push synchronization.
+   
+    ![alt test](http://d1.freep.cn/3tb_1207031039491via480428.jpg)
+
+    ![alt test](http://d1.freep.cn/3tb_120703103940l9bm480428.jpg)
+
+    ![alt test](http://d2.freep.cn/3tb_120703103946q25h480428.jpg) 
+    
+    ![alt test](http://d3.freep.cn/3tb_1207031039506snx480428.jpg) 
 
   * **Release It!**
 

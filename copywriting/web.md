@@ -42,7 +42,6 @@ The always up-to-date document site is hosted at
     + *According feature:* Docco (markdown and highlighted code side-by-side.)
     + *According feature:* Browsing markdown in the project page.
 
-    ![alt test](http://d1.freep.cn/3tb_120703103951koth480428.png)
 
   * **Communicate Well**
 
@@ -50,9 +49,6 @@ The always up-to-date document site is hosted at
     + Shape your ideas and communicate with your team using docas.
 
     + *According feature:* Description for folders and files.
-
-    ![alt test](http://d3.freep.cn/3tb_120703103944lo00480428.jpg)
-    ![alt test](http://d2.freep.cn/3tb_120703103941on8o480428.jpg)
 
 
   * **Stay Focused When Coding**
@@ -63,9 +59,6 @@ The always up-to-date document site is hosted at
     + Docas let your code speaks for itself!
     + *Counterpoint feature:* SLOC statistics.
     
-    ![alt test](http://d3.freep.cn/3tb_120703103943lmbh480428.jpg)...
-    ![alt test](http://d3.freep.cn/3tb_120703103947xhst480428.jpg)
-    ![alt test](http://d1.freep.cn/3tb_120703103948c734480428.jpg) 
 
   * **Keep Documents Fresh**
   
@@ -87,21 +80,30 @@ The always up-to-date document site is hosted at
     + Have a party with your team!
     + *According feature:* Try docas (beta) now!
 
-## Functional modules
-  **Docco **
+## Features
+
+  * **Docco**
 
     It produces HTML that displays your comments alongside your code.
     Comments are passed through Markdown, and code is passed through
     Pygments syntax highlighting. 
     eg:
+    
+    source code doc
+    
     ![alt test](http://d3.freep.cn/3tb_120703151326m9pn480428.jpg)
 
-  **Synchronous Update**
+    generated HTML
+    
+    ![alt test](http://d1.freep.cn/3tb_120703103951koth480428.png)
+
+  * **Synchronous Update**
   
    Synchronously updates your new commits in a document automatically.
+
    Accomplish one-time setup before synchronizing.
 
- **Concise Description**
+  * **Concise Description**
  
    + For source files, write the description at the first line as:
       {COMMENT_SYMBOL}{FOUR SPACES}{THE DESCRIPTION}
@@ -115,20 +117,28 @@ The always up-to-date document site is hosted at
    + For shebang scripts, write the description as source files following 
      the shebang line.
 
- **Statistics** 
+     eg:
+     
+    ![alt test](http://d3.freep.cn/3tb_120703103944lo00480428.jpg)
+    ![alt test](http://d2.freep.cn/3tb_120703103941on8o480428.jpg)
+
+  * **Statistics** 
  
    Docas automatically generates statistics including sloc，size，languages for source files in your repo page.  
 
    Be better to estimate programming productivity or maintainability for developing your repo.
 
    Sloc：
-   ![alt test]()
+   
+   ![alt test](http://d3.freep.cn/3tb_120703103943lmbh480428.jpg)
 
    Size：
-   ![alt test]()
+   
+   ![alt test](http://d3.freep.cn/3tb_120703103947xhst480428.jpg)
 
    Languages：
-   ![alt test]()
+   
+   ![alt test](http://d1.freep.cn/3tb_120703103948c734480428.jpg)
 
 
 

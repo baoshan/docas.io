@@ -95,13 +95,14 @@ The always up-to-date document site is hosted at
 
     generated HTML
     
-    ![alt test](http://d1.freep.cn/3tb_120703103951koth480428.png)
+    ![alt test](http://d3.freep.cn/3tb_120703151326m9pn480428.jpg)
 
   * **Synchronous Update**
   
    Synchronously updates your new commits in a document automatically.
 
    Accomplish one-time setup before synchronizing.
+   
 
   * **Concise Description**
  

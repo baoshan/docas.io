@@ -87,6 +87,47 @@ The always up-to-date document site is hosted at
     + Have a party with your team!
     + *According feature:* Try docas (beta) now!
 
+## Functional modules
+  * Docco
+    It produces HTML that displays your comments alongside your code.
+    Comments are passed through Markdown, and code is passed through
+    Pygments syntax highlighting. 
+    eg:
+    ![alt test](http://d3.freep.cn/3tb_120703151326m9pn480428.jpg)
+
+ * Synchronous Update
+   Synchronously updates your new commits in a document automatically.
+   Accomplish one-time setup before synchronizing.
+
+ * Concise Description
+   + For source files, write the description at the first line as:
+      {COMMENT_SYMBOL}{FOUR SPACES}{THE DESCRIPTION}
+
+   + For markdown files, write the description at the first line as:
+      {FOUR SPACES}{THE DESCRIPTION}
+
+   + For directories, the description is the description for the
+     `README.md` in that directory.
+
+   + For shebang scripts, write the description as source files following 
+     the shebang line.
+
+ * Statistics 
+   Docas automatically generates statistics including sloc，size，languages for source files in your repo page.  
+
+   Be better to estimate programming productivity or maintainability for developing your repo.
+
+   Sloc：
+   ![alt test]()
+
+   Size：
+   ![alt test]()
+
+   Languages：
+   ![alt test]()
+
+
+
 ## Recycle Bin
 
 ## Feature

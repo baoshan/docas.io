@@ -80,7 +80,7 @@ The always up-to-date document site is hosted at
   * Generates HTML documents.
   * Hosted at GitHub pages.
   * Source codes and documents in a same repo.
-  * CNAME supported.
+  * CNAME support.
 
 **Automatically Synchronization**
 

@@ -77,43 +77,44 @@ The always up-to-date document site is hosted at
 
 **Documents on web**
 
-  * Generates HTML documents
+  * Generates HTML documents.
 
-  * Synchronizes documents hosted at GitHub pages
+  * Synchronizes documents hosted at GitHub pages.
 
-  * Cname support
+  * Cname support.
 
-  * Generates comments and source code pages in your repo automatically 
 
 **Programming be perfect**
 
-  * Comments are passed through markdown
+  * Comments are passed through markdown.
 
-  * Code is passed through pygments syntax highlighting
+  * Code is passed through pygments syntax highlighting.
 
-  * Comments are displayed alongside code
+  * Comments are displayed alongside code.
 
-  * Browses markdown in the repo page
+  * Browses markdown in the repo page.
+
+  * Literate-style programming.
+
 
 **Repo under control**
 
-  * Concise description for every folder and source file
+  * Concise description for every folder and source file.
 
-  * SLOC statistics 
+  * SLOC statistics help you estimate productivity. 
 
-  * SIZE statistics
+  * Size statistics shows the repo's data volume. 
 
-  * LANGUAGES statistics
+  * Languages statistics shows a plain language architecture.
 
-  * Recent commits record
+  * Recent commits record. 
 
-**Design be quicker**
 
-  * One-time setup
+**Connection be quicker**  
 
-  * Literate-style programming
+  * One-time setup.
 
-  * Synchronously updates documents on new commits 
+  * Synchronously updates documents on new commits. 
 
 
 ## Supported Languages

@@ -75,37 +75,46 @@ The always up-to-date document site is hosted at
 
 ## Features
 
-  * HTML support
+**Documents on web**
 
-  * A document site support
+  * Generates HTML documents
 
-  * Automatically generated repo page
+  * Synchronizes documents hosted at GitHub pages
 
-  * One-time quick setup
+  * Cname support
 
-  * Markdown and highlighted code in a document
+  * Generates comments and source code pages in your repo automatically 
 
-  * Master and gh-pages branchs accordingly
+**Programming be perfect**
+
+  * Comments are passed through markdown
+
+  * Code is passed through pygments syntax highlighting
 
   * Comments are displayed alongside code
 
-  * Literate-style programming
-
   * Browses markdown in the repo page
+
+**Repo under control**
 
   * Concise description for every folder and source file
 
-  * SLOC statistics
+  * SLOC statistics 
 
   * SIZE statistics
 
   * LANGUAGES statistics
 
-  * Recent commits 
+  * Recent commits record
 
-  * Synchronous generation for comments and code
+**Design be quicker**
 
-  * Automaticlly updates documents on new commits
+  * One-time setup
+
+  * Literate-style programming
+
+  * Synchronously updates documents on new commits 
+
 
 ## Supported Languages
 

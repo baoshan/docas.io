@@ -21,7 +21,7 @@ The always up-to-date document site is hosted at
 
 ## One-Time Setup
 
-  1. Add `docas` as your collaborator from the [admin panel].
+  1. Add `docas` as your collaborator from the [admin p0anel].
   2. Add service hook `http://docas.io`.
   3. You're there!
     - Test it with any push or press the **Test Hook** button.
@@ -37,19 +37,14 @@ The always up-to-date document site is hosted at
     + Break large and complex tasks into small, simple, intuitive, and orthogonal
     tasks.
     + Design every task's detail in plain English and markdown.
-
-
     + *According feature:* Docco (markdown and highlighted code side-by-side.)
     + *According feature:* Browsing markdown in the project page.
-
 
   * **Communicate Well**
 
     + Include a concise description for every folder and source file.
     + Shape your ideas and communicate with your team using docas.
-
     + *According feature:* Description for folders and files.
-
 
   * **Stay Focused When Coding**
 
@@ -57,15 +52,13 @@ The always up-to-date document site is hosted at
     + Balance your design by keeping source lines of code under a maintaibable
     size.
     + Docas let your code speaks for itself!
-    + *Counterpoint feature:* SLOC statistics.
-    
+    + *Counterpoint feature:* SLOC, size, and languages statistics.
 
   * **Keep Documents Fresh**
   
     + Your time spent will be rewarded when code is maintained or enhanced.
     + Rewards come both from yourself and your team.
-    + *According feature:* GitHub push synchronization.
-   
+    + *According feature:* GitHub commits synchronization.
 
   * **Release It!**
 
@@ -78,31 +71,31 @@ The always up-to-date document site is hosted at
 **Instant Documentation**
 
   * Generates HTML documents.
-  * Hosted at GitHub pages.
-  * Source codes and documents in a same repo.
+  * Hosted by GitHub.
+  * Sources and documents in the same repo.
   * CNAME support.
 
-**Automatically Synchronization**
+**Automatic Synchronization**
 
-  * One-time setup.
-  * Updates documents on new commits synchronously.
+  * One-time 2 steps setup.
+  * Documents updated on new commits.
   * Writes everything in the same place.
   * Streamlined literate programming experience.
 
 **Write Freely**
 
-  * Write document in markdown.
+  * Write comments in markdown.
   * Code highlighted by pygments.
-  * Browses markdown in the project page.
-  * Comments are displayed alongside code.
+  * Comments displayed alongside code.
   * Literate-style programming.
 
-**Beyond Source Code**
+**Beyond Documentation**
 
-  * Descriptions for folders and source files.
-  * SLOC / Size statistics.
+  * Descriptions for folders and sources.
+  * SLOC and size statistics.
   * Languages statistics.
   * Recent commits log.
+  * Browse markdown files from the project page.
 
 ## Supported Languages
 
